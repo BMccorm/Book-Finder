@@ -19,17 +19,18 @@ function SearchResults(props) {
                     {props.books.map(currentbook => {
                         return (
                             <div key={currentbook.volumeInfo.imageLinks.smallThumbnail}>
-                                <div className="card col-9 mx-auto mt-1">
+                                <div className="card col-9 mx-auto mt-3">
                                     <div className="card-body">
                                         <div className="d-flex justify-content-between">
                                             <h5 className="card-title">{currentbook.volumeInfo.title}</h5>
                                             <div className="d-flex justify-content-end">
-                                                <button type="button" class="btn btn-light mr-1">View</button>
+                                                <a class="btn btn-light" href={currentbook.volumeInfo.previewLink} role="button" target="_blank">View</a>
                                                 <button type="button" class="btn btn-success ml-1">Save</button></div>
                                         </div>
                                         <h6 className="card-subtitle mb-2 text-muted">{currentbook.volumeInfo.authors}</h6>
                                         <div className="d-flex">
-                                            <img src={currentbook.volumeInfo.imageLinks.smallThumbnail} alt="book_logo" ></img>
+                                            <div>
+                                                <img src={currentbook.volumeInfo.imageLinks.smallThumbnail} alt="book_logo" ></img> </div>
                                             <p className="card-text ml-2">{currentbook.volumeInfo.description}</p>
                                         </div>
                                     </div>
