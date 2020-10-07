@@ -16,5 +16,10 @@ export default {
   // Saves a book to the database
   saveBook: function (bookData) {
     return axios.post("/api/books", bookData);
+  },
+  getTitle: function (title) {
+    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + title + "&key=AIzaSyA1KdcgL8_HtATiFE3m00pUXvotEV-n1BI");
+
   }
 };
+
