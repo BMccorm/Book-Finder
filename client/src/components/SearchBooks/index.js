@@ -29,7 +29,7 @@ function SearchBooks() {
                     placeholder="Book Title"
                     id="searchInput"
                 />
-                <button type="button" class="btn btn-outline-primary ml-3" onClick={handleOnInputChange}>Search</button>
+                <button type="button" className="btn btn-outline-primary ml-3" onClick={handleOnInputChange}>Search</button>
             </form>
             <h4 className="col-9 mx-auto mt-3">Results:</h4>
             <SearchResults books={books} />

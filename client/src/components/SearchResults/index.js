@@ -1,11 +1,11 @@
-import React from "react";
-// import "./style.css";
-// import searchItem from "../Search/index"
-// import { image } from "../../../../models";
+import React, { useState } from 'react'
+import axios from 'axios';
+
+
 
 function SearchResults(props) {
-
     console.log(props.books)
+    const [searchResults, setSearchResults] = useState([]);
 
     // console.log(obj.data.items[0].volumeInfo.title);
     // console.log(obj.data.items[0].volumeInfo.authors);
@@ -13,6 +13,11 @@ function SearchResults(props) {
     // console.log(obj.data.items[0].volumeInfo.imageLinks.smallThumbnail);
     // console.log(obj.data.items[0].id
 
+    const addBook = (event) => {
+        let bookID = parseInt(event.target.getAttribute('id'));
+        axios.post('/api/books', searchResults[bookID]);
+        console.log(bookID)
+    }
     return (
         <div >
             {props.books.length ? (
@@ -25,12 +30,13 @@ function SearchResults(props) {
                                         <div className="d-flex justify-content-between">
                                             <h5 className="card-title">{currentbook.volumeInfo.title}</h5>
                                             <div className="d-flex justify-content-end">
-                                                <a class="btn btn-light" href={currentbook.volumeInfo.previewLink} role="button" target="_blank" rel="noopener noreferrer">View</a>
-                                                <button type="button" class="btn btn-success ml-1">Save</button></div>
+                                                <a className="btn btn-light" href={currentbook.volumeInfo.previewLink} role="button" target="_blank" rel="noopener noreferrer">View</a>
+                                                <button type="button" className="btn btn-success ml-1" id={currentbook.id} onClick={addBook}>Save</button></div>
+
                                         </div>
                                         <h6 className="card-subtitle mb-2 text-muted">{currentbook.volumeInfo.authors}</h6>
                                         <div className="d-flex">
-                                            <div className="d-flex align-middle">
+                                            <div className="mt-3 mr-3">
                                                 <img src={currentbook.volumeInfo.imageLinks.smallThumbnail} alt="book_logo" ></img> </div>
                                             <p className="card-text ml-2">{currentbook.volumeInfo.description}</p>
                                         </div>
