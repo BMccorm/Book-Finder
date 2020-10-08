@@ -25,7 +25,7 @@ function SearchResults(props) {
                                         <div className="d-flex justify-content-between">
                                             <h5 className="card-title">{currentbook.volumeInfo.title}</h5>
                                             <div className="d-flex justify-content-end">
-                                                <a class="btn btn-light" href={currentbook.volumeInfo.previewLink} role="button" target="_blank">View</a>
+                                                <a class="btn btn-light" href={currentbook.volumeInfo.previewLink} role="button" target="_blank" rel="noopener noreferrer">View</a>
                                                 <button type="button" class="btn btn-success ml-1">Save</button></div>
                                         </div>
                                         <h6 className="card-subtitle mb-2 text-muted">{currentbook.volumeInfo.authors}</h6>
@@ -42,7 +42,7 @@ function SearchResults(props) {
                     })}
                 </div>
             ) : (
-                    <h3>No Results to Display</h3>
+                    <h3 className="col-9 mx-auto mt-3">No Results to Display</h3>
                 )}
         </div>
     );
