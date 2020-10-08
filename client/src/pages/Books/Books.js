@@ -86,7 +86,7 @@
 //               value={formObject.author}
 //             />
 //             <TextArea
-//               onChange={handleInputChange}
+//               ={handleInputChange}
 //               name="synopsis"
 //               placeholder="Synopsis (Optional)"
 //               value={formObject.synopsis}

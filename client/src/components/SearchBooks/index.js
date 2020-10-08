@@ -1,12 +1,20 @@
 
 import SearchResults from "../SearchResults/index";
 import API from "../../utils/API";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
+const [books, setBooks] = useState([])
 
 function SearchBooks() {
-    const [books, setBooks] = useState([])
-    API.getTitle("Harry Potter").then(function (obj) {
+    // event.preventDefault();
+
+    handleOnInputChange = (event) => {
+        const searchItem = event.target.value;
+        console.log(searchItem)
+        this.setState({ search: searchItem })
+    }
+
+    API.getTitle(searchString).then(function (obj) {
         setBooks(obj.data.items);
 
     })
@@ -15,9 +23,10 @@ function SearchBooks() {
             <form className="form-group d-flex mx-5 mt-2 justify-content-center">
 
                 <input type="text"
-                    // value={this.state.search}
+                    value={this.state.search}
                     className="form-control col-6"
-                    placeholder="Search" />
+                    placeholder="Search"
+                    onChange={this.handleOnInputChange} />
             </form>
             <h4 className="col-9 mx-auto mt-3">Results:</h4>
             <SearchResults books={books} />

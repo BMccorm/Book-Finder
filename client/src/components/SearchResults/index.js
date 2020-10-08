@@ -11,6 +11,7 @@ function SearchResults(props) {
     // console.log(obj.data.items[0].volumeInfo.authors);
     // console.log(obj.data.items[0].volumeInfo.description);
     // console.log(obj.data.items[0].volumeInfo.imageLinks.smallThumbnail);
+    // console.log(obj.data.items[0].id
 
     return (
         <div >
@@ -29,7 +30,7 @@ function SearchResults(props) {
                                         </div>
                                         <h6 className="card-subtitle mb-2 text-muted">{currentbook.volumeInfo.authors}</h6>
                                         <div className="d-flex">
-                                            <div>
+                                            <div className="d-flex align-middle">
                                                 <img src={currentbook.volumeInfo.imageLinks.smallThumbnail} alt="book_logo" ></img> </div>
                                             <p className="card-text ml-2">{currentbook.volumeInfo.description}</p>
                                         </div>
