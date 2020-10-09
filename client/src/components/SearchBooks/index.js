@@ -15,7 +15,6 @@ function SearchBooks() {
 
         API.getTitle(searchItem).then(function (obj) {
             setBooks(obj.data.items);
-
         })
     }
 

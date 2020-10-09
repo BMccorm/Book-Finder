@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
-
-
-// API.saveBook(searchItem).then(function (obj) {
-//     setBooks(obj.data.items);
+// import axios from 'axios';
+import API from "../../utils/API"
 
 
 function SearchResults(props) {
@@ -20,9 +17,9 @@ function SearchResults(props) {
     }, [props.books])
 
     const addBook = (id) => {
-        axios.post('/api/books', searchResults[id]);
-        console.log(searchResults[id])
+        API.saveBook(searchResults[id])
     }
+
 
     return (
         <div >
@@ -30,7 +27,7 @@ function SearchResults(props) {
                 <div>
                     {props.books.map((currentbook, index) => {
                         return (
-                            <div key={currentbook.volumeInfo.imageLinks.smallThumbnail}>
+                            <div key={currentbook.id}>
                                 <div className="card col-9 mx-auto mt-3">
                                     <div className="card-body">
                                         <div className="d-flex justify-content-between">

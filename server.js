@@ -8,10 +8,11 @@ const app = express();
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("client/build"));
 app.use(routes);
 // Serve up static assets (usually on heroku)
 
-app.use(express.static("client/build"));
+
 
 
 // Add routes, both API and view

@@ -7,7 +7,9 @@ export default {
   },
   // Gets the book with the given id
   getBook: function (id) {
+    console.log(id)
     return axios.get("/api/books/" + id);
+
   },
   // Deletes the book with the given id
   deleteBook: function (id) {
@@ -15,7 +17,15 @@ export default {
   },
   // Saves a book to the database
   saveBook: function (bookData) {
-    return axios.post("/api/books", bookData);
+    console.log(bookData)
+    return axios.post("/api/books", {
+      link: bookData.volumeInfo.previewLink,
+      image: bookData.volumeInfo.imageLinks.smallThumbnail,
+      title: bookData.volumeInfo.title,
+      authors: bookData.volumeInfo.authors,
+      description: bookData.volumeInfo.description,
+      thumbnail: bookData.volumeInfo.imageLinks.smallThumbnail
+    });
   },
   getTitle: function (title) {
     return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + title + "&key=AIzaSyA1KdcgL8_HtATiFE3m00pUXvotEV-n1BI");
