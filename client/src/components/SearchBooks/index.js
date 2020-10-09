@@ -11,7 +11,7 @@ function SearchBooks() {
     const handleOnInputChange = (event) => {
 
         const searchItem = document.getElementById("searchInput").value;
-        console.log(searchItem)
+        // console.log(searchItem)
 
         API.getTitle(searchItem).then(function (obj) {
             setBooks(obj.data.items);

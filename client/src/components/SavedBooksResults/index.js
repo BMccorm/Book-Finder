@@ -1,40 +1,43 @@
-import React from 'react'
-// import API from "../../utils/API"
+import React, { useState, useEffect } from 'react'
+import API from "../../utils/API"
 
 
 function SavedBooksResults(props) {
-    console.log(props.books)
-    // const [SavedBooksResults, setSearchResults] = useState([]);
+    const [savedResults, setsavedResults] = useState([]);
+    useEffect(() => {
+        setsavedResults(props.books)
 
-    // useEffect(() => {
-    //     setSearchResults(props.books)
-    // }, [props.books])
+    }, [props.books])
 
-    // API.getBook(SavedBooksResults).then(function (obj) {
-    //     setSearchResults(obj.data.items);
-    // })
+    const deleteBook = (id) => {
+        API.deleteBook(savedResults[id])
+    }
 
-    // const getBook = (id) => {
-    //     API.getBook(SavedBooksResults[id])
-    // }
+    // link: bookData.volumeInfo.previewLink,
+    //     image: bookData.volumeInfo.imageLinks.smallThumbnail,
+    //         title: bookData.volumeInfo.title,
+    //             authors: bookData.volumeInfo.authors,
+    //                 description: bookData.volumeInfo.description,
+    //                     thumbnail: bookData.volumeInfo.imageLinks.smallThumbnail
 
     return (
         <div >
-            {props.books ? (
+            {props.books.length ? (
                 <div>
                     {props.books.map((currentbook, index) => {
                         return (
-                            <div key={currentbook.id} className="card col-9 mx-auto mt-3"> <div className="card-body">
+                            <div key={currentbook._id} className="card col-9 mx-auto mt-3"> <div className="card-body">
                                 <div className="d-flex justify-content-between">
-                                    <h5 className="card-title">Card title</h5>
+                                    <h5 className="card-title">{currentbook.title}</h5>
                                     <div className="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-light mr-1">View</button>
-                                        <button type="button" class="btn btn-danger ml-1">Delete</button></div>
+                                        <a className="btn btn-light" href={currentbook.link} role="button" target="_blank" rel="noopener noreferrer">View</a>
+                                        <button type="button" className="btn btn-danger ml-1" onClick={() => deleteBook(index)}>Delete</button></div>
                                 </div>
-                                <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <div>
-                                    {/* <img src={image} alt="book_logo" ></img> */}
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h6 className="card-subtitle mb-2 text-muted">{currentbook.authors}</h6>
+                                <div className="d-flex">
+                                    <div className="mt-3 mr-3">
+                                        <img src={currentbook.thumbnail} alt="book_logo" ></img> </div>
+                                    <p className="card-text ml-2">{currentbook.description}</p>
                                 </div>
                             </div>
                             </div>
