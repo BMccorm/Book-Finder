@@ -10,7 +10,8 @@ function SavedBooksResults(props) {
     }, [props.books])
 
     const deleteBook = (id) => {
-        API.deleteBook(savedResults[id])
+        API.deleteBook(savedResults[id]._id)
+        console.log(savedResults[id]._id)
     }
 
     // link: bookData.volumeInfo.previewLink,
@@ -31,7 +32,7 @@ function SavedBooksResults(props) {
                                     <h5 className="card-title">{currentbook.title}</h5>
                                     <div className="d-flex justify-content-end">
                                         <a className="btn btn-light" href={currentbook.link} role="button" target="_blank" rel="noopener noreferrer">View</a>
-                                        <button type="button" className="btn btn-danger ml-1" onClick={() => deleteBook(index)}>Delete</button></div>
+                                        <button type="button" className="btn btn-danger ml-1" id={currentbook._id} onClick={() => deleteBook(index)}>Delete</button></div>
                                 </div>
                                 <h6 className="card-subtitle mb-2 text-muted">{currentbook.authors}</h6>
                                 <div className="d-flex">
