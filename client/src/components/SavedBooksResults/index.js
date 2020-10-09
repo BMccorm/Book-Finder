@@ -13,14 +13,6 @@ function SavedBooksResults(props) {
         API.deleteBook(savedResults[id]._id)
         console.log(savedResults[id]._id)
     }
-
-    // link: bookData.volumeInfo.previewLink,
-    //     image: bookData.volumeInfo.imageLinks.smallThumbnail,
-    //         title: bookData.volumeInfo.title,
-    //             authors: bookData.volumeInfo.authors,
-    //                 description: bookData.volumeInfo.description,
-    //                     thumbnail: bookData.volumeInfo.imageLinks.smallThumbnail
-
     return (
         <div >
             {props.books.length ? (

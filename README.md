@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+![GitHub repo size](https://img.shields.io/github/repo-size/BMcCorm/book-finder)
+![GitHub stars](https://img.shields.io/github/stars/BMcCorm/book-finder?style=social)
+![GitHub forks](https://img.shields.io/github/forks/BMcCorm/book-finder?style=social)
 
-### `npm start`
+# book-finder
+Created by [BMcCorm](https://github.com/BMcCorm) 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Github icon image](https://avatars1.githubusercontent.com/u/64443618?v=4)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of Contents
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Contributing](#Contributors)
+- [Testing](#Testing)
+- [License](#License)
+- [Questions](#Questions)
 
-### `npm test`
+## Description
+This book finder allows the user to search for and save books of interest. The data is pulled using the Google Books API and the clean user interface was made with Bootstrap. The components are dynamically created using React. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
+No installation is required. The site is hosted on Heroku and MongoDB Atlas. It can be found [here](https://google-books-bm.herokuapp.com/).
 
-### `npm run build`
+## Usage
+Enter a book title and hit search. A list of books will be populated below. Click on the "save" button to store the data or "view" to visit the book's information on Google. Navigate to the Saved Books page using the nav bar. There, you'll see a list of books that have been saved by the user. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Interested in contributing? Here's how:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Fork this repository
+2. Create a branch: git checkout -b "create_a_branch_name"
+3. Make and commit your changes: git commit -m "add your message here"
+4. Push to the master branch: git push origin "branch_name"
+5. Create the pull request
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Additional information on creating a pull request can be found [here](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request). 
 
-### `npm run eject`
+## Contributors
+None at this time
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Testing
+None at this time
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
+None at this time
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Questions
+For more information, please email me at BrielleMcCormick@gmail.com
+The link for this project can be found [here.](https://BMcCorm.github.io/book-finder/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
