@@ -4,7 +4,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/BMcCorm/book-finder?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/BMcCorm/book-finder?style=social)
 
-# book-finder
+# Google Book Finder
 Created by [BMcCorm](https://github.com/BMcCorm) 
 
 ![Github icon image](https://avatars1.githubusercontent.com/u/64443618?v=4)

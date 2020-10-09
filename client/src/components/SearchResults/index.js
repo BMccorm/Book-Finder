@@ -21,6 +21,12 @@ function SearchResults(props) {
     }
 
 
+    // const authors = (props.books.volumeInfo.authors).map(addSpace)
+
+    // function addSpace(num) {
+    //     return num + ", ";
+    // }
+
     return (
         <div >
             {props.books.length ? (
@@ -37,7 +43,7 @@ function SearchResults(props) {
                                                 <button type="button" className="btn btn-success ml-1" id={currentbook.id} onClick={() => addBook(index)}>Save</button></div>
 
                                         </div>
-                                        <h6 className="card-subtitle mb-2 text-muted">{currentbook.volumeInfo.authors}</h6>
+                                        <h6 className="card-subtitle mb-2 text-muted">Written By: {currentbook.volumeInfo.authors.join(', ')}</h6>
                                         <div className="d-flex">
                                             <div className="mt-3 mr-3">
                                                 <img src={currentbook.volumeInfo.imageLinks.smallThumbnail} alt="book_logo" ></img> </div>

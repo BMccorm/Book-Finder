@@ -26,7 +26,7 @@ function SavedBooksResults(props) {
                                         <a className="btn btn-light" href={currentbook.link} role="button" target="_blank" rel="noopener noreferrer">View</a>
                                         <button type="button" className="btn btn-danger ml-1" id={currentbook._id} onClick={() => deleteBook(index)}>Delete</button></div>
                                 </div>
-                                <h6 className="card-subtitle mb-2 text-muted">{currentbook.authors}</h6>
+                                <h6 className="card-subtitle mb-2 text-muted">Written By: {currentbook.authors.join(', ')}</h6>
                                 <div className="d-flex">
                                     <div className="mt-3 mr-3">
                                         <img src={currentbook.thumbnail} alt="book_logo" ></img> </div>
