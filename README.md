@@ -25,7 +25,8 @@ This book finder allows the user to search for and save books of interest. The d
 No installation is required. The site is hosted on Heroku and MongoDB Atlas. It can be found [here](https://google-books-bm.herokuapp.com/).
 
 ## Usage
-Enter a book title and hit search. A list of books will be populated below. Click on the "save" button to store the data or "view" to visit the book's information on Google. Navigate to the Saved Books page using the nav bar. There, you'll see a list of books that have been saved by the user. 
+Enter a book title and hit search. A list of books will be populated below. Click on the "save" button to store the data or "view" to visit the book's information on Google. Navigate to the Saved Books page using the nav bar. There, you'll see a list of books that have been saved by the user. <br><br>
+![demo gif](/client/src/assets/google_books_demo.gif)
 
 ## Interested in contributing? Here's how:
 
